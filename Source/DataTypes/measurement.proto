@@ -9,16 +9,6 @@ package dolittle.timeseries.datatypes;
 option csharp_namespace = "Dolittle.TimeSeries.DataTypes.Protobuf";
 
 message Measurement {
-    oneof value {
-        float float_value = 1;
-        double double_value = 2;
-        int32 int32_value = 3;
-        int64 int64_value = 4;
-    }
-    oneof error {
-        float float_error = 5;
-        double double_error = 6;
-        int32 int32_error = 7;
-        int64 int64_error = 8;
-    }
+    double value = 1;
+    double error = 2;
 }
