@@ -26,14 +26,14 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
           string.Concat(
             "CiZDb25uZWN0b3JzL3NlcnZlci9wdWxsX2Nvbm5lY3Rvci5wcm90bxIlZG9s",
             "aXR0bGUudGltZXNlcmllcy5jb25uZWN0b3JzLnNlcnZlchoRc3lzdGVtL2d1",
-            "aWQucHJvdG8iWQoNUHVsbENvbm5lY3RvchIaCgJpZBgBIAEoCzIOLmRvbGl0",
-            "dGxlLmd1aWQSDAoEbmFtZRgCIAEoCRIQCghpbnRlcnZhbBgDIAEoBRIMCgR0",
-            "YWdzGAQgAygJQjWqAjJEb2xpdHRsZS5UaW1lU2VyaWVzLlJ1bnRpbWUuQ29u",
-            "bmVjdG9ycy5HcnBjLlNlcnZlcmIGcHJvdG8z"));
+            "aWQucHJvdG8iSwoNUHVsbENvbm5lY3RvchIaCgJpZBgBIAEoCzIOLmRvbGl0",
+            "dGxlLmd1aWQSDAoEbmFtZRgCIAEoCRIQCghpbnRlcnZhbBgDIAEoBUI1qgIy",
+            "RG9saXR0bGUuVGltZVNlcmllcy5SdW50aW1lLkNvbm5lY3RvcnMuR3JwYy5T",
+            "ZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::System.Protobuf.GuidReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server.PullConnector), global::Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server.PullConnector.Parser, new[]{ "Id", "Name", "Interval", "Tags" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server.PullConnector), global::Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server.PullConnector.Parser, new[]{ "Id", "Name", "Interval" }, null, null, null)
           }));
     }
     #endregion
@@ -68,7 +68,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
       id_ = other.id_ != null ? other.id_.Clone() : null;
       name_ = other.name_;
       interval_ = other.interval_;
-      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,16 +109,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
       }
     }
 
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PullConnector);
@@ -136,7 +125,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
       if (!object.Equals(Id, other.Id)) return false;
       if (Name != other.Name) return false;
       if (Interval != other.Interval) return false;
-      if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,7 +134,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
       if (id_ != null) hash ^= Id.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Interval != 0) hash ^= Interval.GetHashCode();
-      hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,7 +159,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
         output.WriteRawTag(24);
         output.WriteInt32(Interval);
       }
-      tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -190,7 +176,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
       if (Interval != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Interval);
       }
-      size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -214,7 +199,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
       if (other.Interval != 0) {
         Interval = other.Interval;
       }
-      tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -239,10 +223,6 @@ namespace Dolittle.TimeSeries.Runtime.Connectors.Grpc.Server {
           }
           case 24: {
             Interval = input.ReadInt32();
-            break;
-          }
-          case 34: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
         }

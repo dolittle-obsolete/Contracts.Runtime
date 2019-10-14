@@ -14,5 +14,4 @@ message PullConnector {
     guid id = 1;
     string name = 2;
     int32 interval = 3;
-    repeated string tags = 4;
 }
