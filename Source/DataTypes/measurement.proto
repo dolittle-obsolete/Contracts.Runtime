@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-package dolittle.timeseries.datatypes;
+package dolittle.timeseries.runtime.datatypes;
 
-option csharp_namespace = "Dolittle.TimeSeries.DataTypes";
+option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataTypes";
 
 message Measurement {
     double value = 1;

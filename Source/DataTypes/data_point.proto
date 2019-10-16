@@ -4,16 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "system/guid.proto";
 import "google/protobuf/timestamp.proto";
 import "DataTypes/value.proto";
 
-package dolittle.timeseries.datatypes;
+package dolittle.timeseries.runtime.datatypes;
 
-option csharp_namespace = "Dolittle.TimeSeries.DataTypes";
+option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataTypes";
 
 message DataPoint {
-    guid timeSeries = 1;
+    bytes timeSeries = 1;
     Value value = 2;
     google.protobuf.Timestamp timestamp = 3;
 }

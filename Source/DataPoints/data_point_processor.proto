@@ -4,12 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "system/guid.proto";
+package dolittle.timeseries.runtime.datapoints;
 
-package dolittle.timeseries.datapoints.runtime;
-
-option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
+option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataPoints";
 
 message DataPointProcessor {
-    guid id = 1;
+    bytes id = 1;
 }

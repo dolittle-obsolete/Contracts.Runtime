@@ -6,9 +6,9 @@ syntax = "proto3";
 
 import "DataTypes/measurement.proto";
 
-package dolittle.timeseries.datatypes;
+package dolittle.timeseries.runtime.datatypes;
 
-option csharp_namespace = "Dolittle.TimeSeries.DataTypes";
+option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataTypes";
 
 message Vector2 {
     Measurement x = 1;

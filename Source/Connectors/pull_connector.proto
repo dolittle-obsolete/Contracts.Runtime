@@ -4,11 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-package dolittle;
+package dolittle.timeseries.runtime.connectors;
 
-option csharp_namespace = "System.Protobuf";
+option csharp_namespace = "Dolittle.TimeSeries.Runtime.Connectors";
 
-// Represents a .NET Guid
-message guid {
-    bytes value = 1;
+message PullConnector {
+    bytes id = 1;
+    string name = 2;
+    int32 interval = 3;
 }

@@ -4,18 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "system/guid.proto";
 import "google/protobuf/Empty.proto";
-import "Connectors/runtime/pull_connector.proto";
+import "Connectors/pull_connector.proto";
 import "DataPoints/tag_data_point.proto";
 
-package dolittle.timeseries.connectors.runtime;
+package dolittle.timeseries.runtime.connectors;
 
-option csharp_namespace = "Dolittle.TimeSeries.Connectors.Runtime";
+option csharp_namespace = "Dolittle.TimeSeries.Runtime.Connectors";
 
 message WriteMessage {
-    guid connectorId = 1;
-    repeated dolittle.timeseries.datapoints.TagDataPoint Data = 2;
+    bytes connectorId = 1;
+    repeated dolittle.timeseries.runtime.datapoints.TagDataPoint Data = 2;
 }
 
 message PullRequest {
