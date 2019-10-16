@@ -10,7 +10,7 @@ import "DataTypes/vector3.proto";
 
 package dolittle.timeseries.datatypes;
 
-option csharp_namespace = "Dolittle.TimeSeries.DataTypes.Protobuf";
+option csharp_namespace = "Dolittle.TimeSeries.DataTypes";
 
 message Value {
     oneof value {

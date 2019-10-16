@@ -8,7 +8,7 @@ import "DataTypes/measurement.proto";
 
 package dolittle.timeseries.datatypes;
 
-option csharp_namespace = "Dolittle.TimeSeries.DataTypes.Protobuf";
+option csharp_namespace = "Dolittle.TimeSeries.DataTypes";
 
 message Vector2 {
     Measurement x = 1;

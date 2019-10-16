@@ -8,7 +8,7 @@ import "DataTypes/value.proto";
 
 package dolittle.timeseries.datapoints;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataPoints.Grpc";
+option csharp_namespace = "Dolittle.TimeSeries.DataPoints";
 
 message TagDataPoint {
     string tag = 1;

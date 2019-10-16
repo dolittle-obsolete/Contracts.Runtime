@@ -5,15 +5,17 @@
 syntax = "proto3";
 
 import "system/guid.proto";
-import "google/protobuf/timestamp.proto";
-import "DataTypes/value.proto";
+import "DataTypes/data_point.proto";
 
-package dolittle.timeseries.datatypes;
+package dolittle.timeseries.datapoints.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.DataTypes";
+option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
 
-message DataPoint {
-    guid timeSeries = 1;
-    Value value = 2;
-    google.protobuf.Timestamp timestamp = 3;
+message TimeSerie {
+    guid id = 1;
+}
+
+// Represents the service for datapoint input stream 
+service InputStream {    
+    rpc Open(stream dolittle.timeseries.datatypes.DataPoint) returns(stream TimeSerie) {}
 }
