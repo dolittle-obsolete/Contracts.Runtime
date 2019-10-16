@@ -6,7 +6,7 @@
 syntax = "proto3";
 
 import "google/protobuf/Empty.proto";
-import "DataPoints/tag_data_point.proto";
+import "DataPoints/TagDataPoint.proto";
 
 package dolittle.timeseries.runtime.connectors;
 

@@ -4,14 +4,14 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "DataTypes/data_point.proto";
-import "DataPoints/data_point_processor.proto";
+import "google/protobuf/empty.proto";
+import "DataTypes/DataPoint.proto";
 
 package dolittle.timeseries.runtime.datapoints;
 
 option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataPoints";
 
 // Represents the service for working with data point processors that are stream based
-service DataPointProcessors {
-    rpc Open(DataPointProcessor) returns(stream dolittle.timeseries.runtime.datatypes.DataPoint) {}
+service DataPointStream {
+    rpc Open(stream dolittle.timeseries.runtime.datatypes.DataPoint) returns(google.protobuf.Empty) {}
 }

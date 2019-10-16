@@ -5,7 +5,7 @@
 syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
-import "DataTypes/value.proto";
+import "DataTypes/Value.proto";
 
 package dolittle.timeseries.runtime.datatypes;
 

@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "DataTypes/measurement.proto";
+import "DataTypes/Measurement.proto";
 
 package dolittle.timeseries.runtime.datatypes;
 
