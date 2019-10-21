@@ -8,12 +8,12 @@ syntax = "proto3";
 import "google/protobuf/Empty.proto";
 import "DataPoints/TagDataPoint.proto";
 
-package dolittle.timeseries.runtime.connectors;
+package dolittle.timeseries.connectors.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.Connectors";
+option csharp_namespace = "Dolittle.TimeSeries.Connectors.Runtime";
 
 message StreamTagDataPoints {
-    repeated dolittle.timeseries.runtime.datapoints.TagDataPoint DataPoints=1;
+    repeated dolittle.timeseries.datapoints.runtime.TagDataPoint DataPoints=1;
 }
 
 // Represents the service for working with connectors that are stream based

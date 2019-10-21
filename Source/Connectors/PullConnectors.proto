@@ -8,13 +8,13 @@ import "google/protobuf/Empty.proto";
 import "Connectors/PullConnector.proto";
 import "DataPoints/TagDataPoint.proto";
 
-package dolittle.timeseries.runtime.connectors;
+package dolittle.timeseries.connectors.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.Connectors";
+option csharp_namespace = "Dolittle.TimeSeries.Connectors.Runtime";
 
 message WriteMessage {
     bytes connectorId = 1;
-    repeated dolittle.timeseries.runtime.datapoints.TagDataPoint Data = 2;
+    repeated dolittle.timeseries.datapoints.runtime.TagDataPoint Data = 2;
 }
 
 message PullRequest {

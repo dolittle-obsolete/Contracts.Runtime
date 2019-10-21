@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-package dolittle.timeseries.runtime.connectors;
+package dolittle.timeseries.connectors.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.Connectors";
+option csharp_namespace = "Dolittle.TimeSeries.Connectors.Runtime";
 
 message PullConnector {
     bytes id = 1;

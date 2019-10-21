@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-package dolittle.timeseries.runtime.datapoints;
+package dolittle.timeseries.datapoints.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataPoints";
+option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
 
 message DataPointProcessor {
     bytes id = 1;

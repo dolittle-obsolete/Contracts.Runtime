@@ -6,11 +6,11 @@ syntax = "proto3";
 
 import "DataTypes/value.proto";
 
-package dolittle.timeseries.runtime.datapoints;
+package dolittle.timeseries.datapoints.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataPoints";
+option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
 
 message TagDataPoint {
     string tag = 1;
-    dolittle.timeseries.runtime.datatypes.Value value = 2;
+    dolittle.timeseries.datatypes.runtime.Value value = 2;
 }

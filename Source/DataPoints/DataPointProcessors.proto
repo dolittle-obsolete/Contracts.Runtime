@@ -7,11 +7,11 @@ syntax = "proto3";
 import "DataTypes/DataPoint.proto";
 import "DataPoints/DataPointProcessor.proto";
 
-package dolittle.timeseries.runtime.datapoints;
+package dolittle.timeseries.datapoints.runtime;
 
-option csharp_namespace = "Dolittle.TimeSeries.Runtime.DataPoints";
+option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
 
 // Represents the service for working with data point processors that are stream based
 service DataPointProcessors {
-    rpc Open(DataPointProcessor) returns(stream dolittle.timeseries.runtime.datatypes.DataPoint) {}
+    rpc Open(DataPointProcessor) returns(stream dolittle.timeseries.datatypes.runtime.DataPoint) {}
 }
