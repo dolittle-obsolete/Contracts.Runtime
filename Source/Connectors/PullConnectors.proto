@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "google/protobuf/Empty.proto";
+import "google/protobuf/empty.proto";
 import "Connectors/PullConnector.proto";
 import "DataPoints/TagDataPoint.proto";
 
