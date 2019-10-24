@@ -1,5 +1,7 @@
 # TimeSeries Runtime Contracts
 
+[![Build Status](https://dev.azure.com/dolittle/Dolittle%20open-source%20repositories/_apis/build/status/dolittle-timeseries.Contracts.Runtime?branchName=master)](https://dev.azure.com/dolittle/Dolittle%20open-source%20repositories/_build/latest?definitionId=33&branchName=master)
+
 This repository holds the [Protobuf](https://developers.google.com/protocol-buffers/)
 and [gRPC](https://grpc.io) API contracts for what is exposed from our TimeSeries Runtime.
 
