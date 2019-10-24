@@ -8,6 +8,7 @@ package dolittle.timeseries.connectors.runtime;
 
 option csharp_namespace = "Dolittle.TimeSeries.Connectors.Runtime";
 
+
 message Blah {
     bytes id = 1;
     string name = 2;
