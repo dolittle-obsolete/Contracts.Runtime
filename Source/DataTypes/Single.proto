@@ -8,7 +8,7 @@ package dolittle.timeseries.datatypes.runtime;
 
 option csharp_namespace = "Dolittle.TimeSeries.DataTypes.Runtime";
 
-message Measurement {
+message Single {
     double value = 1;
     double error = 2;
 }

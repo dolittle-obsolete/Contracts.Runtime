@@ -5,7 +5,9 @@
 syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
-import "DataTypes/Value.proto";
+import "DataTypes/Single.proto";
+import "DataTypes/Vector2.proto";
+import "DataTypes/Vector3.proto";
 
 package dolittle.timeseries.datatypes.runtime;
 
@@ -13,6 +15,12 @@ option csharp_namespace = "Dolittle.TimeSeries.DataTypes.Runtime";
 
 message DataPoint {
     bytes timeSeries = 1;
-    Value value = 2;
-    google.protobuf.Timestamp timestamp = 3;
+
+    oneof measurement {
+        Single single_value = 2;
+        Vector2 vector2_value = 3;
+        Vector3 vector3_value = 4;
+    }
+    
+    google.protobuf.Timestamp timestamp = 5;
 }

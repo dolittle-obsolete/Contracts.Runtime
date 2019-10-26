@@ -4,7 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "DataTypes/Value.proto";
+import "DataTypes/Single.proto";
+import "DataTypes/Vector2.proto";
+import "DataTypes/Vector3.proto";
 
 package dolittle.timeseries.datapoints.runtime;
 
@@ -12,5 +14,10 @@ option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
 
 message TagDataPoint {
     string tag = 1;
-    dolittle.timeseries.datatypes.runtime.Value value = 2;
+
+    oneof measurement {
+        dolittle.timeseries.datatypes.runtime.Single single_value = 2;
+        dolittle.timeseries.datatypes.runtime.Vector2 vector2_value = 3;
+        dolittle.timeseries.datatypes.runtime.Vector3 vector3_value = 4;
+    }
 }
