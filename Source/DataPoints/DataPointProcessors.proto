@@ -11,7 +11,11 @@ package dolittle.timeseries.datapoints.runtime;
 
 option csharp_namespace = "Dolittle.TimeSeries.DataPoints.Runtime";
 
+message DataPoints {
+    repeated dolittle.timeseries.datatypes.runtime.DataPoint dataPoints = 1;
+}
+
 // Represents the service for working with data point processors that are stream based
 service DataPointProcessors {
-    rpc Open(DataPointProcessor) returns(stream dolittle.timeseries.datatypes.runtime.DataPoint) {}
+    rpc Open(DataPointProcessor) returns(stream DataPoints) {}
 }
